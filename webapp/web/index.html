@@ -30,6 +30,7 @@
   <!-- TODO: Swap the two stylesheet references in order to use Sass (and
        uncomment the sass transformer in the pubspec.yaml file. -->
   <!-- <link rel="stylesheet" href="styles/main_gen.css"> -->
+  <link rel="import" href="packages/polymer/polymer.html">
   <link rel="stylesheet" href="styles/foundation.min.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -76,18 +77,19 @@
         <p>Hier Kommen Tasks hin</p>
     </div>
 
-    <div id="about" style="display:none">
+    <div class="panel" id="about" style="display:none">
       <p>
       A very basic todo app implemented in Dart.
-      Source: <a href="https://github.com/mswift42/darttodo">github.com/mswift42/darttodo</a>
+      </p>
+      <p>Source: <a href="https://github.com/mswift42/darttodo">github.com/mswift42/darttodo</a></p>
       </p>
     </div>
     <div id="newtask" style="display:none">
         <h3>New Task</h3>
         <form >
-            <input type="text" id="summary" placeholder="Task Summary">
-            <textarea rows="5" id="content"></textarea>
-            <input type="text" id="scheduled" placeholder="Scheduled Date">
+            <input type="text" id="summary" placeholder="Task Summary" required>
+            <textarea rows="5" id="content" required></textarea>
+            <input type="text" id="scheduled" placeholder="Scheduled Date" required>
             <input type="submit" id="submit" value="Save Task">
         </form>
     </div>
