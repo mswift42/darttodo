@@ -7,6 +7,11 @@ import 'package:webapp/nav_menu.dart';
 //import 'package:webapp/reverser.dart';
 import 'package:route_hierarchical/client.dart';
 
+InputElement summary = querySelector('#summary');
+TextInputElement content = querySelector('#content');
+InputElement scheduled = querySelector('#scheduled');
+InputElement submit = querySelector('#submit');
+
 void main() {
   initNavMenu();
 //  initReverser();
@@ -37,5 +42,5 @@ void showHome(RouteEvent e) {
 void showNewTask(RouteEvent e) {
 	querySelector('#home').style.display='none';
 	querySelector('#about').style.display='none';
-	querySelector('#newtask').style.display='active';
+	querySelector('#newtask').style.display='';
 }

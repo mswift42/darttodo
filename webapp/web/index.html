@@ -30,6 +30,7 @@
   <!-- TODO: Swap the two stylesheet references in order to use Sass (and
        uncomment the sass transformer in the pubspec.yaml file. -->
   <!-- <link rel="stylesheet" href="styles/main_gen.css"> -->
+  <link rel="stylesheet" href="styles/foundation.min.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
@@ -81,11 +82,15 @@
       Source: <a href="https://github.com/mswift42/darttodo">github.com/mswift42/darttodo</a>
       </p>
     </div>
-    <div id="newtask">
-        <form action="">
-
-
+    <div id="newtask" style="display:none">
+        <h3>New Task</h3>
+        <form >
+            <input type="text" id="summary" placeholder="Task Summary">
+            <textarea rows="5" id="content"></textarea>
+            <input type="text" id="scheduled" placeholder="Scheduled Date">
+            <input type="submit" id="submit" value="Save Task">
         </form>
+    </div>
   </main>
 
   <script type="application/dart" src="main.dart"></script>
