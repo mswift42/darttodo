@@ -11,6 +11,7 @@ import 'package:route_hierarchical/client.dart';
 
 void main() {
   initNavMenu();
+
 //  initReverser();
 
   // Webapps need routing to listen for changes to the URL.

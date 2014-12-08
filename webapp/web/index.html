@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="styles/foundation.min.css">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="import" href="packages/paper_elements/paper_input.html">
+    <link href="packages/paper_elements/paper_input_decorator.html" rel="import">
+
 </head>
 
 <body unresolved>
@@ -87,18 +89,22 @@
   </div>
   <div id="newtask" style="display:none">
     <h3>New Task</h3>
-    
     <form >
-      <paper-input label="Type something..."></paper-input>
-
-    
+    <paper-input-decorator label="Task Summary the 2nd" floatingLabel>
+      <paper-input></paper-input>
+      </paper-input-decorator>
+  <paper-input-decorator label="Task Content" floatingLabel>
+   <paper-autogrow-textarea id="papercontent">
+        <textarea id="contentbody"></textarea>
+    </paper-autogrow-textarea>
+    </paper-input-decorator>
     </form>
   </div>
 </main>
 
 <script type="application/dart" src="main.dart"></script>
 <script data-pub-inline src="packages/browser/dart.js"></script>
-<script type="application/dart">export 'package:polymer/init.dart';</script>
-
+<!-- <script type="application/dart">export 'package:polymer/init.dart';</script>
+ -->
 </body>
 </html>
