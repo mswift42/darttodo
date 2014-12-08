@@ -28,14 +28,15 @@
   <meta name="msapplication-TileColor" content="#3372DF">
 
   <!-- TODO: Swap the two stylesheet references in order to use Sass (and
-       uncomment the sass transformer in the pubspec.yaml file. -->
+  uncomment the sass transformer in the pubspec.yaml file. -->
   <!-- <link rel="stylesheet" href="styles/main_gen.css"> -->
   <link rel="import" href="packages/polymer/polymer.html">
   <link rel="stylesheet" href="styles/foundation.min.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="import" href="packages/paper_elements/paper_input.html">
 </head>
 
-<body>
+<body unresolved>
 
   <!-- example content. remove if you use your own styles and widgets -->
 
@@ -44,8 +45,8 @@
       <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
       <h1 class="logo">Days - Do all your stuff</h1>
       <section class="app-bar-actions">
-      <!-- Put App Bar Buttons Here -->
-      <!-- e.g <button><i class="icon icon-star"></i></button> -->
+        <!-- Put App Bar Buttons Here -->
+        <!-- e.g <button><i class="icon icon-star"></i></button> -->
       </section>
     </div>
   </header>
@@ -60,7 +61,7 @@
   </nav>
 
   <!-- contains different views as divs, which the routing system
-       displays or hides when the URL changes -->
+  displays or hides when the URL changes -->
   <main>
 
     <div id="home">
@@ -72,30 +73,32 @@
         <p>
         Reversed:<br>
         <output id="out"></output>
-        </p> -->
-        <!-- <button id="newtaskbutton" class="button">New Task</button> -->
-        <p>Hier Kommen Tasks hin</p>
+      </p> -->
+      <!-- <button id="newtaskbutton" class="button">New Task</button> -->
+      <p>Hier Kommen Tasks hin</p>
     </div>
 
     <div class="panel" id="about" style="display:none">
       <p>
-      A very basic todo app implemented in Dart.
+        A very basic todo app implemented in Dart.
       </p>
       <p>Source: <a href="https://github.com/mswift42/darttodo">github.com/mswift42/darttodo</a></p>
-      </p>
-    </div>
-    <div id="newtask" style="display:none">
-        <h3>New Task</h3>
-        <form >
-            <input type="text" id="summary" placeholder="Task Summary" required>
-            <textarea rows="5" id="content" required></textarea>
-            <input type="text" id="scheduled" placeholder="Scheduled Date" required>
-            <input type="submit" id="submit" value="Save Task">
-        </form>
-    </div>
-  </main>
+    </p>
+  </div>
+  <div id="newtask" style="display:none">
+    <h3>New Task</h3>
+    
+    <form >
+      <paper-input label="Type something..."></paper-input>
 
-  <script type="application/dart" src="main.dart"></script>
-  <script data-pub-inline src="packages/browser/dart.js"></script>
+    
+    </form>
+  </div>
+</main>
+
+<script type="application/dart" src="main.dart"></script>
+<script data-pub-inline src="packages/browser/dart.js"></script>
+<script type="application/dart">export 'package:polymer/init.dart';</script>
+
 </body>
 </html>
