@@ -1,0 +1,21 @@
+<polymer-element name="todo-about">
+    <template>
+        <style>
+        :host {
+        width:60%;
+        padding:8px;
+        background-color:"oldlace";
+        }
+        </style>
+        <div>
+            <div>
+                {{description}}
+            </div>
+            <div>
+                <p id="source">Source: <a href={{url}}>{{urlname}}</a></p>
+                <p id="author">Copyright, {{year}} : {{author}}</p>
+            </div>
+        </div>
+    </template>
+    <script type="application/dart" src="todo_about.dart"></script>
+</polymer-element>
