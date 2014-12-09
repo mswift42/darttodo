@@ -10,6 +10,7 @@ import 'package:route_hierarchical/client.dart';
 
 
 void main() {
+  initPolymer();
   initNavMenu();
 
 //  initReverser();
@@ -22,6 +23,7 @@ void main() {
     ..addRoute(name: 'newtask', path: '/newtask', enter: showNewTask);
 
   router.listen();
+
 }
 
 void showAbout(RouteEvent e) {
@@ -34,7 +36,7 @@ void showAbout(RouteEvent e) {
 void showHome(RouteEvent e) {
   querySelector('#home').style.display = '';
   querySelector('#about').style.display = 'none';
-	querySelector('#newtask').style.display='none';
+  querySelector('#newtask').style.display='none';
 }
 
 void showNewTask(RouteEvent e) {
