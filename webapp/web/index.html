@@ -36,6 +36,7 @@ is governed by a BSD-style license that can be found in the LICENSE file.
         <link href="packages/paper_elements/paper_input_decorator.html" rel="import">
         <link rel="import" href="todo-about.html">
         <link  rel="import" href="packages/paper_elements/paper_shadow.html">
+        
     </head>
 
     <body unresolved>
@@ -82,6 +83,9 @@ is governed by a BSD-style license that can be found in the LICENSE file.
                         <paper-autogrow-textarea id="papercontent">
                             <textarea id="contentbody"></textarea>
                         </paper-autogrow-textarea>
+                    </paper-input-decorator>
+                    <paper-input-decorator label="Scheduled" floatingLabel>
+            <input type="date" id="scheduled"/>
                     </paper-input-decorator>
                 </form>
             </div>
