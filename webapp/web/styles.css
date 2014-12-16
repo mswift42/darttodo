@@ -1,0 +1,46 @@
+/* Copyright (c) 2014, <your name>. All rights reserved. Use of this source code */
+/* is governed by a BSD-style license that can be found in the LICENSE file. */
+
+html,body {
+    height:100%;
+    margin:0;
+    font-family: RobotoDraft, sans-serif;
+    color: #333;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+core-header-panel {
+    height: 40%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+core-toolbar {
+    background: #55165a;
+    color: white;
+}
+paper-tabs {
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* .container { */
+/*     width: 80%; */
+/*     margin: 0 auto; */
+/* } */
+@media (min-width: 481px) {
+    paper-tabs {
+        width: 280px;
+    }
+    .container {
+        width: 400px;
+    }
+}
+/* .header { */
+/*     margin-top:100px; */
+/* } */
