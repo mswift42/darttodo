@@ -1,0 +1,43 @@
+<link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/core_elements/core_header_panel.html">
+<link rel="import" href="../../packages/core_elements/core_toolbar.html">
+<link rel="import" href="../../packages/paper_elements/paper_tabs.html">
+<link rel="import" href="../../packages/paper_elements/paper_tab.html">
+
+<polymer-element name="nav-bar">
+    <template>
+        <style>
+         core-header-panel {
+             height: 100%;
+             overflow: auto;
+             -webkit-overflow-scrolling: touch;
+         }
+         core-toolbar {
+             background:#55165a;
+             color:white;
+         }
+         paper-tabs {
+             width: 100%;
+         }
+         @media (min-width: 481px) {
+             paper-tabs {
+                 width: 280px;
+             }
+             .container {
+                 width: 400px;
+             }
+         }
+
+        </style>
+        <core-header-panel>
+            <core-toolbar>
+                <paper-tabs valueattr="name" selected="tasks" self-end>
+                    <paper-tab id="tasks" name="tasks">Tasks</paper-tab>
+                    <paper-tab name="newtask">New Task</paper-tab>
+                    <paper-tab name="about">About</paper-tab>
+                </paper-tabs>
+            </core-toolbar>
+        </core-header-panel>
+    </template>
+    <script type="application/dart" src="nav_bar.dart"></script>
+</polymer-element>
