@@ -1,0 +1,19 @@
+<link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/paper_elements/paper_input.html">
+<link rel="import" href="../../packages/paper_elements/paper_button.html">
+<link rel="import" href="../../packages/paper_elements/paper_autogrow_textarea.html">
+
+<polymer-element name="new-task">
+<template>
+<style>
+
+</style>
+<form action="/tasks" method="POST">
+    <paper-input name="summary" placeholder="Task Summary" inputValue="{{tasksummary}}"></paper-input>
+    <paper-autogrow-textarea id="content" placeholder="Task Content" inputValue="{{taskcontent}}"></paper-autogrow-textarea>
+    <paper-input type="date" id="scheduled"></paper-input>
+    <paper-button id="submittask">Save</paper-button>
+</form>
+</template>
+<script type="application/dart" src="new_task.dart"></script>
+</polymer-element>
